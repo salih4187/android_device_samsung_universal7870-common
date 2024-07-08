@@ -25,10 +25,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
 
-# Do not update the recovery image
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.recovery_update=false
-
 # FIFO UI scheduling
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.use_fifo_ui=1
@@ -71,10 +67,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.smps.enable=true \
     telephony.lteOnCdmaDevice=0 \
     ro.vendor.multisim.simslotcount=2
-
-#Treble
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=true
 
 # sdcardfs
 PRODUCT_PROPERTY_OVERRIDES += \
