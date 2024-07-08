@@ -146,6 +146,8 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
@@ -266,10 +268,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.vendor_security_patch=2019-11-01
 
-# VNDK
-PRODUCT_PACKAGES += \
-    libgui_vendor
-
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -283,7 +281,7 @@ PRODUCT_PACKAGES += \
     libnl
 
 # Properties
--include $(LOCAL_PATH)/vendor_prop.mk
+-include $(LOCAL_PATH)/system_prop.mk
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/universal7870-common/universal7870-common-vendor.mk)
