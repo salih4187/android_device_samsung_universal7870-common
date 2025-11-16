@@ -131,7 +131,7 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
-USE_OPENGL_RENDERER := true
+TARGET_BOARD_KERNEL_HEADERS := hardware/samsung_slsi/exynos/kernel-3.18-headers/kernel-headers
 
 # HALs
 TARGET_AUDIOHAL_VARIANT := samsung
